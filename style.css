@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@400;900&display=swap');
+
+/* Theme Settings */
+.theme-dark { 
+    --bg: #000; --text: #fff; --sub: #555; --btn-bg: #fff; --btn-text: #000; 
+    --input-bg: #111; --input-border: #333; --input-text: #fff;
+    --img-preset: brightness(0.85) contrast(1.1); 
+}
+.theme-light { 
+    --bg: #ffffff; --text: #000; --sub: #999; --btn-bg: #000; --btn-text: #fff; 
+    --input-bg: #f9fafb; --input-border: #d1d5db; --input-text: #111;
+    --img-preset: brightness(1.05) saturate(1.1); 
+}
+
+body { background-color: var(--bg); font-family: 'Inter', sans-serif; transition: background 0.4s ease; }
+
+/* Fixed STRAIGHT Input Field */
+.name-field-straight {
+    background-color: var(--input-bg);
+    border: 2px solid var(--input-border);
+    color: var(--input-text);
+    transform: none !important; /* Meka thamai straight karanne */
+}
+.name-field-straight:focus { border-color: #3b82f6; }
+.theme-text { color: var(--text); }
+
+/* Canvas Container Area */
+.canvas-container {
+    width: 400px;
+    height: 720px;
+    background-color: var(--bg);
+    position: relative;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-title { color: var(--text); }
+.theme-subtitle { color: var(--sub); }
+
+/* Scattered Polaroid Stack */
+.stack-container { position: relative; flex-grow: 1; width: 100%; margin-top: 20px; }
+.polaroid-item {
+    background: #fff;
+    padding: 10px 10px 32px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.img-frame { width: 100%; aspect-ratio: 1; background: #eee; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.img-frame img { width: 100%; height: 100%; object-fit: cover; filter: var(--img-preset); transition: filter 0.5s; }
+.polaroid-label { font-family: 'Dancing Script', cursive; color: #333; font-size: 15px; text-align: center; margin-top: 8px; }
+
+/* Positions within Canvas */
+.p-1 { width: 190px; top: 10px; left: 20px; transform: rotate(-6deg); z-index: 5; }
+.p-2 { width: 150px; top: 40px; right: 20px; transform: rotate(8deg); z-index: 3; }
+.p-3 { width: 165px; top: 215px; left: 50%; transform: translateX(-50%) rotate(2deg); z-index: 4; }
+.p-4 { width: 155px; bottom: 125px; left: 30px; transform: rotate(-9deg); z-index: 2; }
+.p-5 { width: 175px; bottom: 85px; right: 30px; transform: rotate(6deg); z-index: 6; }
+
+.theme-toggle-btn { background: var(--btn-bg); color: var(--btn-text); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.save-button { background: var(--btn-bg); color: var(--btn-text); }
