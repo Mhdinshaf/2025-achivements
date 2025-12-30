@@ -1,4 +1,4 @@
-# ✨ 2025 Polaroid Recap Generator
+# ✨ 2025 Achievements Generator
 
 A professional, high-performance web tool designed to create aesthetic Polaroid-style achievement posters for the year 2025.
 
